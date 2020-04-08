@@ -10,6 +10,7 @@ public class App
 {
     public static void main( String[] args ) throws ClassNotFoundException, SQLException
     {
-        DATABASE.connect();
+//        DATABASE.connect();
+    	ConnectionPoolDataBase.connect();
     }
 }
