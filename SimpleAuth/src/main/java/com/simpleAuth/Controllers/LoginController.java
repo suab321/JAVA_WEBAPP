@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.simpleAuth.Dao.UserDaoImpl;
+import com.simpleAuth.Service.JDBCService;
 import com.simpleAuth.model.LoginModel;
 
 @Controller
@@ -27,6 +28,7 @@ public class LoginController {
 	
 	@RequestMapping(value="/loginProccess",method=RequestMethod.POST)
 	public ModelAndView loginProcess(@ModelAttribute("loginData") LoginModel lm) throws SQLException, ClassNotFoundException {
+		JDBCService.users();
 		ModelAndView mv=new ModelAndView();
 		if(ud.validate(lm)) {
 			mv.setViewName("index.jsp");

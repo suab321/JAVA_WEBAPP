@@ -1,11 +1,9 @@
 package com.simpleAuth.Service;
 
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.sql.Connection;
@@ -41,14 +39,14 @@ public class DataBaseService {
 //		Connection con1=con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/Auth","root","");
 //		Class.forName("com.mysql.jdbc.Driver");
 		Connection con1=DataBasePooling.getConnection();
-		String query="select * from authTable where name=?";
+		String query="select password from authTable where name=?";
 		PreparedStatement ps=con1.prepareStatement(query);
 		ps.setString(1, lm.getUserName());
 		try {
 			ResultSet rs=ps.executeQuery();
 			while(rs.next()) {
-				System.out.println(rs.getString(2));
-				if(lm.getPassword().equals(rs.getString(2)))
+				System.out.println(rs.getString(1));
+				if(lm.getPassword().equals(rs.getString(1)))
 					return true;
 				else
 					return false;

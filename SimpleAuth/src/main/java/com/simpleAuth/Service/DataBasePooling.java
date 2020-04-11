@@ -3,10 +3,13 @@ package com.simpleAuth.Service;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import org.springframework.stereotype.Component;
+
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
 
+@Component
 public class DataBasePooling {
 	
 	private static HikariConfig config=new HikariConfig();
@@ -28,9 +31,11 @@ public class DataBasePooling {
 		try {
 			return ds.getConnection();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return null;
 		}
+	}
+	public static HikariDataSource getDataSource(){
+		return ds;
 	}
 }
