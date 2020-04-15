@@ -1,0 +1,21 @@
+{
+  "name": "prac",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "gridfs-stream": "^1.1.1",
+    "mongoose": "^5.9.9",
+    "multer": "^1.4.2",
+    "multer-gridfs-storage": "^4.0.3",
+    "nodemon": "^2.0.3"
+  }
+}
