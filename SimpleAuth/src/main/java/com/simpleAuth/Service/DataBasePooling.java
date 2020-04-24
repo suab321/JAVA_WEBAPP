@@ -4,12 +4,13 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
 
-@Component
+@Service
 public class DataBasePooling {
 	
 	private static HikariConfig config=new HikariConfig();
