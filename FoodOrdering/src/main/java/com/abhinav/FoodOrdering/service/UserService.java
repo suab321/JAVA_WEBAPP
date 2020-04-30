@@ -1,6 +1,8 @@
 package com.abhinav.FoodOrdering.service;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,5 +25,8 @@ public class UserService {
 	}
 	public boolean placeOrder(int userId) {
 		return sdbs.placeOrder(userId);
+	}
+	public Map<String, List<Integer>> getOrders(int userId) {
+		return sdbs.getOrders(userId);
 	}
 }

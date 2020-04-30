@@ -3,7 +3,7 @@ package com.abhinav.FoodOrdering.model;
 public class CartModel {
 	private int cartId;
 	private int userId;
-	
+
 	public CartModel(){}
 	
 	public CartModel(int cartId,int userId) {

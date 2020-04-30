@@ -1,6 +1,8 @@
 package com.abhinav.FoodOrdering.Controller;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -30,5 +32,9 @@ public class BuisnessController {
 	@GetMapping("/placeOrder")
 	public boolean placeOrder(@RequestParam("userId")int userId) {
 		return userService.placeOrder(userId);
+	}
+	@GetMapping("/getOrder")
+	public Map<String, List<Integer>> place(@RequestParam("userId")int userId) {
+		return userService.getOrders(userId);
 	}
 }
