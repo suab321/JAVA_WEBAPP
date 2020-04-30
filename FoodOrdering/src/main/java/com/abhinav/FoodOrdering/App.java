@@ -1,6 +1,10 @@
 package com.abhinav.FoodOrdering;
 
+import java.sql.Date;
+import java.util.Calendar;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
@@ -18,8 +22,6 @@ public class App
     public static void main( String[] args )
     {
         SpringApplication.run(App.class, args);
-    	
-//    	System.out.println(env.getProperty("server.port"));
-    	
+        System.out.println(Calendar.getInstance().getTime());
     }
 }
