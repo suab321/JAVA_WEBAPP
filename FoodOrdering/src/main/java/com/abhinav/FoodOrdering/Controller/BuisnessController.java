@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.abhinav.FoodOrdering.Databasedao.FoodDao;
+import com.abhinav.FoodOrdering.Databasedao.OrderDao;
 import com.abhinav.FoodOrdering.model.FoodModel;
 import com.abhinav.FoodOrdering.service.UserService;
 
@@ -34,7 +36,11 @@ public class BuisnessController {
 		return userService.placeOrder(userId);
 	}
 	@GetMapping("/getOrder")
-	public Map<String, List<Integer>> place(@RequestParam("userId")int userId) {
+	public List<OrderDao> place(@RequestParam("userId")int userId) {
 		return userService.getOrders(userId);
+	}
+	@GetMapping("/getCart")
+	public List<FoodDao> getCartItem(@RequestParam("userId")int userId){
+		return userService.getCartItem(userId);
 	}
 }
