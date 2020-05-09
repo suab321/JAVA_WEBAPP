@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sat May 09 07:01:22 IST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0171-f70e-ec61-000008a01900 
+on database directory memory:/home/abhinav/JAVA_WEBAPP/SpringDataJPA/testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@3d4eac69 
+Loaded from file:/home/abhinav/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Ubuntu
+java.runtime.version=11.0.7+10-post-Ubuntu-2ubuntu218.04
+user.dir=/home/abhinav/JAVA_WEBAPP/SpringDataJPA
+os.name=Linux
+os.arch=amd64
+os.version=5.3.0-51-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
