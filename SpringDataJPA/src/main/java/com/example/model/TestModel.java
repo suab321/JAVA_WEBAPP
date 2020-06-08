@@ -1,30 +1,32 @@
 package com.example.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class TestModel {
 	
-	@Id
-	private int testId;
+	@Id //primary key
+	@GeneratedValue //generates auto value (in this case auto increments the id
+	private int id;
 	private String name;
 	private String description;
 	
 	public TestModel(){}
 	
-	public TestModel(int id,String name,String desc) {
-		this.testId=id;
+	public TestModel(int Id,String name,String description) {
+		this.id=Id;
 		this.name=name;
-		this.description=desc;
+		this.description=description;
 	}
 
 	public int getId() {
-		return testId;
+		return id;
 	}
 
 	public void setId(int id) {
-		this.testId = id;
+		this.id = id;
 	}
 
 	public String getName() {
@@ -35,11 +37,11 @@ public class TestModel {
 		this.name = name;
 	}
 
-	public String getDesc() {
+	public String getDescription() {
 		return description;
 	}
 
-	public void setDesc(String desc) {
-		this.description = desc;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 }

@@ -173,7 +173,7 @@ public class SpringDataBaseService {
 		System.out.println(values.size());
 		return values;
 	}
-	
+
 	public List<FoodDao> getCartItem(int userId){
 		String query="select foodId,Name,itemCount from food inner join(select cartId,itemCount,foodId from cart where userId=? and ordered=0) as foods on foods.foodId=Food_Id ;";
 		List<FoodDao> foodList=jt.query(query,new Object[] {userId},new RowMapper<FoodDao>() {

@@ -11,7 +11,7 @@ public class SubTest {
 	private int id;
 	private String name;
 	private String description;
-	
+
 	@ManyToOne
 	private TestModel tm;
 
@@ -46,5 +46,13 @@ public class SubTest {
 
 	public void setDescription(String description) {
 		this.description = description;
-	}	
+	}
+
+	public TestModel getTm() {
+		return tm;
+	}
+
+	public void setTm(int id) {
+		this.tm = new TestModel(id, "", "");
+	}
 }

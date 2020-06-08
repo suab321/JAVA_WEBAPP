@@ -24,9 +24,14 @@ public class SubTestService {
 		stp.findAll().forEach(subtests::add);
 		return subtests;
 	}
-	
-//	public List<SubTest> getSubTestOnTest(int id){
-////		List<SubTest> substests=new ArrayList<SubTest>();
-////		return stp.findByTestId(id);
-//	}
+
+	public SubTest getSubTest(String name) {
+		return stp.findByName(name);
+	}
+
+	public List<SubTest> getSubTestbyTmId(int id){
+		List<SubTest> re = new ArrayList<>();
+		stp.findByTmId(id).forEach(re::add);
+		return re;
+	}
 }

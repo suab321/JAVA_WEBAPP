@@ -29,6 +29,7 @@ public class TestController {
 
 	@RequestMapping(value="/addTest",method=RequestMethod.POST)
 	public boolean addTest(@RequestBody TestModel tm) {
+		System.out.println(tm.getDescription()+" "+tm.getName()+" "+tm.getId());
 		return ts.addTest(tm);
 	}
 	
