@@ -23,5 +23,4 @@ public class myUserDetailService implements UserDetailsService {
 		ue.orElseThrow(()->new UsernameNotFoundException("userName"));
 		return ue.map(MyUserDetail::new).get();
 	}
-	
 }
